@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>ADN RIF</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/materialize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
+  <body>
+    <div class="body_background_img">
+      <div class="body_background_gradient">
+        <header class="main_header">
+          <div class="container"><a class="header_logo" href=""><img class="header_logo_img" src="res/logo.png"/>
+              <p class="header_logo_text">RIF: J-29807630-5</p></a></div>
+        </header>
+        <main class="main">
+          <div class="container">
+            <div class="main_login col s12">
+              <div class="main_login__top">
+                <h1 class="main_login_title">Inicio de Sesión</h1>
+                <p class="main_login_info">Ingrese datos de usuario</p>
+              </div>
+              <div class="main_login_inputs">
+                <form class="main_login_form" action="backend.php" method="POST">
+                  <div class="form_input">
+                    <label for="user"><img class="main_login_icon" src="res/icono-usuario.png" alt="Ícono usuario"/></label>
+                    <input class="main_login_input browser-default" type="text" placeholder="Usuario" id="user" name="user" required="required"/>
+                  </div>
+                  <div class="form_input">
+                    <label for="pass"><img class="main_login_icon" src="res/icono-usuario.png" alt="Ícono usuario"/></label>
+                    <input class="main_login_input browser-default" type="password" id="pass" placeholder="Contraseña" name="password" autocomplete="off" required="required"/>
+                  </div>
+                  <input class="form_submit" type="submit" value="Ingresar"/>
+                </form>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="container">
+            <ul class="footer_contact_list">
+              <li class="footer_contact_item"><a class="footer_contact_link" href="http://sistemasadn.com/" target="_blank"><img src="res/icono-lupa.png"/>
+                  <p class="footer_contact_link_text">www.sistemasadn.com</p></a></li>
+              <li class="footer_contact_item"><a class="footer_contact_link" href="mailto:ventas@sistemasadn.com?Subject=ADN RIF Consulta"><img src="res/icono-mensaje.png"/>
+                  <p class="footer_contact_link_text"> ventas@sistemasadn.com</p></a></li>
+              <li class="footer_contact_item"><a class="footer_contact_link" href="https://www.instagram.com/adnsoftware/" target="_blank"><img src="res/icono-instagram.png"/>
+                  <p class="footer_contact_link_text"> adnsoftware</p></a></li>
+              <li class="footer_contact_item"><a class="footer_contact_link" href="https://www.facebook.com/sistemasadn" target="_blank"><img src="res/icono-facebook.png"/>
+                  <p class="footer_contact_link_text"> sistemasadn</p></a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
