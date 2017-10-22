@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>ADN RIF</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/materialize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
+  <body>
+    <div class="body_home">
+      <header class="home_header">
+        <div class="home_header__top">
+          <div class="container">
+            <div class="home_header__logo"><a class="home_header__link" href="" target="_blank"><img class="header_logo__img" src="res/logo.png"/>
+                <p class="header_logo__text">RIF: J-29807630-5</p></a></div>
+            <div class="home_header__info">
+              <p class="home_header__text">"Compromiso, Calidad e innovación"</p><a class="home_header__info__link" href="" target="_blank">www.sistemasadn.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="home_header__title">
+          <h1 class="home_header__title__text">ADNRif</h1>
+        </div>
+        <div class="home_header__nav">
+          <p class="home_header__name">Distribuidora ABC</p>
+          <p class="home_header__user"><span class="home_header__user__tag"> Usuario </span> - Jhon Zambrano Quintero</p>
+          <button class="home_header__button">Finalizar sesión</button>
+        </div>
+      </header>
+      <main class="home_main">
+        <div class="content">
+          <form class="home_form" action="backend.php" method="POST" id="rifForm">
+            <div class="home_form__contain">
+              <label class="form_input__label" for="rifInput">RIF</label>
+              <input class="form_input_text browser-default" type="text" id="rifInput" name="rif_search"/><a class="form_input__link" href="#" id="searchButton"><img class="form_input__img" src="res/icono-lupa.png" alt="Icono lupa"/></a>
+            </div>
+          </form>
+          <form class="home_form" action="backend.php" method="POST" id="sendForm">
+            <input class="browser-default" type="hidden" id="hiddenInput" name="rif_file" value=""/>
+            <div class="home_form__file_contain">
+              <label class="form_input__label_file" for="rifFile"> <img class="form_input__label_img" src="res/icono-lupa.png" alt="Subir archivo"/></label>
+              <p class="form_input_file__text">Adjuntar archivo excel <span> .xlsx </span></p>
+              <input class="form_input_file browser-default" type="file" id="rifFile" accept=".xlsx"/><a class="form_input__link" href="#" id="sendButton"><img class="form_input__img" src="res/icono-lupa.png" alt="Icono lupa"/></a>
+            </div>
+          </form>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer_address">
+          <p class="footer_address__text">C.C Plaza nivel 3 local L-137 - San Cristóbal - Táchira - Venezuela</p>
+        </div>
+        <div class="footer_contact">
+          <p class="footer_contact__text">0276 - 414.90.27 / 0276 - 414.21.07</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
