@@ -30,20 +30,58 @@
       </header>
       <main class="home_main">
         <div class="content">
-          <form class="home_form" action="backend.php" method="POST" id="rifForm">
+          <form class="home_form" action="validate.php" method="POST" id="rifForm">
             <div class="home_form__contain">
               <label class="form_input__label" for="rifInput">RIF</label>
-              <input class="form_input_text browser-default" type="text" id="rifInput" name="rif_search"/><a class="form_input__link" href="#" id="searchButton"><img class="form_input__img" src="res/icono-lupa.png" alt="Icono lupa"/></a>
+              <input class="form_input_text browser-default" type="text" id="rifInput" name="onlyRif" required="required"/><a class="form_input__link" href="#" id="searchButton"><img class="form_input__img" src="res/icono-lupa.png" alt="Icono lupa"/></a>
             </div>
           </form>
-          <form class="home_form" action="backend.php" method="POST" id="sendForm">
-            <input class="browser-default" type="hidden" id="hiddenInput" name="rif_file" value=""/>
-            <div class="home_form__file_contain">
-              <label class="form_input__label_file" for="rifFile"> <img class="form_input__label_img" src="res/icono-lupa.png" alt="Subir archivo"/></label>
+          <button class="upload_file_box__open">Cargar archivo excel</button>
+          <div class="upload_file_box upload_file_box__closed">
+            <div class="upload_file_box__content">
               <p class="form_input_file__text">Adjuntar archivo excel <span> .xlsx </span></p>
-              <input class="form_input_file browser-default" type="file" id="rifFile" accept=".xlsx"/><a class="form_input__link" href="#" id="sendButton"><img class="form_input__img" src="res/icono-lupa.png" alt="Icono lupa"/></a>
+              <button class="upload_file_box__close browser-default">X</button>
+              <form class="home_form" action="validate.php" method="POST" id="sendForm">
+                <input class="browser-default" type="hidden" id="hiddenInput" name="jsonData" value=""/>
+                <div class="home_form__file_contain">
+                  <!--label(for="rifFile").form_input__label_file 
+                  img(src="res/icono-lupa.png" alt="Subir archivo").form_input__label_img
+                  
+                  -->
+                  <input class="form_input_file browser-default upload_excel_button" type="file" id="rifFile" accept=".xlsx" required="required"/>
+                </div>
+                <p class="select_excel_column_text">Seleccione la columna de los rif</p><select required class="select_excel_column browser-default">
+                <option value=""></option><option value="A">A</option>
+<option value="B">B</option>
+<option value="C">C</option>
+<option value="D">D</option>
+<option value="E">E</option>
+<option value="F">F</option>
+<option value="G">G</option>
+<option value="H">H</option>
+<option value="I">I</option>
+<option value="J">J</option>
+<option value="K">K</option>
+<option value="L">L</option>
+<option value="M">M</option>
+<option value="N">N</option>
+<option value="O">O</option>
+<option value="P">P</option>
+<option value="Q">Q</option>
+<option value="R">R</option>
+<option value="S">S</option>
+<option value="T">T</option>
+<option value="U">U</option>
+<option value="V">V</option>
+<option value="W">W</option>
+<option value="X">X</option>
+<option value="Y">Y</option>
+<option value="Z">Z</option>
+</select><a class="form_input__link" href="#" id="sendButton">Enviar
+                  <!--img(src="res/icono-lupa.png" alt="Icono lupa").form_input__img--></a>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </main>
       <footer class="footer">
@@ -55,5 +93,9 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.11.5/xlsx.full.min.js"></script>
+    <script src="js/all.js"></script>
+    <!--script(src="js/Excel.js")-->
+    <!--script(src="js/scripts.js")-->
   </body>
 </html>
